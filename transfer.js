@@ -22,7 +22,7 @@ async function transfer() {
     type: "erc1155",
     receiver: address,
     contract_address: CONTRACT_ADDRESS,
-    token_id: tokenId,
+    token_id: tokenId.toString(),
     amount: amount
   }
   let result = await Moralis.transfer(options);

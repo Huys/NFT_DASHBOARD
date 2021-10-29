@@ -38,7 +38,7 @@ function renderInventory(NFTs, ownerData) {
         <p class="card-text">${nft.metadata.description}</p>
         <p class="card-text">Amount: ${nft.amount}</p>
         <p class="card-text">Number of Owners: ${nft.owners.length}</p>
-        <p class="card-text">Your balance: ${ownerData[nft.token_id]}</p>
+        <p class="card-text">Your balance: ${ownerData[nft.token_id] || 0}</p>
         <a href="/mint.html?nftId=${nft.token_id}" class="btn btn-primary">Mint</a>
         <a href="/transfer.html?nftId=${nft.token_id}" class="btn btn-primary">Transfer</a>
       </div>
